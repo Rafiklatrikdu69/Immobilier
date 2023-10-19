@@ -21,21 +21,21 @@ class ProprieteFormRequest extends FormRequest
      *
      * @return array
      */
+
     public function rules()
     {
         return [
-            'titre'=>['required','min:6'],
-            'description'=>['required','min:6'],
-            'surface'=>['required','integer','min:6'],
-            'nb_pieces'=>['required','integer','min:1'],
-            'nb_chambres'=>['required','min:6','min:0'],
-            'nb_etages'=>['required','min:6','min:0'],
-            'prix'=>['required','min:0','integer'],
-            'ville'=>['required','min:6'],
-            'adresse'=>['required','min:6'],
-            'code_postal'=>['required','min:6'],
-            'vendu'=>['required','boolean'],
+            'titre' => 'required|min:6',
+            'description' => 'required|min:6',
+            'surface' => 'required|integer|min:6',
+            'nb_pieces' => 'required|integer|min:1',
+            'nb_chambres' => 'required|integer|min:0',
+            'nb_etages' => 'required|integer|min:0',
+            'prix' => 'required|integer|min:0',
+            'ville' => 'required|min:6',
+            'adresse' => 'required|min:6',
+            'code_postal' => 'required|min:6',
+            'vendu' => 'required|boolean',
         ];
-
     }
 }

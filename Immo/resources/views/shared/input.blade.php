@@ -2,12 +2,15 @@
 $type ='text';
 $name ??= '';
 $titre ??= '';
+$value ??='';
 @endphp
 
 <div>
-    <form>
+
         <label>{{$titre}}</label>
-        <input type="{{$type}}" name="{{$name}}" >
-    </form>
+
+        <input type="{{$type}}" name="{{$name}}"  value="{{$value}}">
+
+
 
 </div>

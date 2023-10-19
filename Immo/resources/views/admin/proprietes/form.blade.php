@@ -6,18 +6,26 @@
 @section('contenu')
 
 <h1>@yield('titre')</h1>
-        <form action="{{route($propriete->exists ? "admin.proprietes.update" : "admin.proprietes.store",['propriete'=>$propriete]) }}" method="get">
-        @csrf
-        @include('shared.input',['titre'=>'Titre','name' =>'titreBien'])
-        </form>
-    <div>
-        <button>
+<form method="POST" action="{{ route('admin.proprietes.store') }}">
+    @csrf
+
+@include('shared.input',['titre'=>'Le bien' ,'name'=>'bien'])
+
+    <button type="submit">
         @if($propriete->exists)
             Modifier
         @else
             Créer
         @endif
-        </button>
+    </button>
 
-    </div>
+
+</form>
+
+
+
+@error('titre')
+<div>{{$message}}</div>
+@enderror
+
 @endsection

@@ -30,6 +30,8 @@ class ProprieteController extends Controller
      */
     public function create()
     {
+
+
         $propriete = new propriete();
 
         return view("admin.proprietes.form",[
@@ -44,9 +46,9 @@ class ProprieteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProprieteFormRequest $request)
     {
-        //
+
     }
 
     /**
