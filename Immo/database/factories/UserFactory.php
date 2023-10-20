@@ -4,9 +4,11 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 class UserFactory extends Factory
 {
+
     /**
      * Define the model's default state.
      *
@@ -14,12 +16,21 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+
+
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+
+            'titre' => $this->faker->name,
+            'description' => $this->faker->email,
+            'surface' => $this->faker->randomNumber(),
+            'nb_pieces' => $this->faker->randomNumber(),
+            'nb_chambres' => $this->faker->randomNumber(),
+            'nb_etages' => $this->faker->randomNumber(),
+            'prix' => $this->faker->randomNumber(),
+            'ville' => $this->faker->city(),
+            'adresse' => $this->faker->address,
+            'code_postal' => $this->faker->countryCode,
+            'vendu' => $this->faker->boolean,
         ];
     }
 

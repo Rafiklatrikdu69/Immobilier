@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class propriete extends Model
 {
+    protected $table = 'proprietes';
+
     use HasFactory;
 }

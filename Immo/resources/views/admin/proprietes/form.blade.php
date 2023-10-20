@@ -10,7 +10,7 @@
     @csrf
 
 @include('shared.input',['titre'=>'Le bien' ,'name'=>'bien'])
-
+    @include('shared.input',['type'=>'textarea','titre'=>'Description' ,'name'=>'description'])
     <button type="submit">
         @if($propriete->exists)
             Modifier
